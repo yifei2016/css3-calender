@@ -1,0 +1,70 @@
+/* #text{
+  margin-top: 6%;
+  border: 2px solid yellow;
+
+} */
+html, body {
+  height: 100%;
+  background: #000;
+  width: 100vw;
+}
+.image{
+  width: 100%;
+  height: auto;
+}
+* {
+  box-sizing: border-box;
+}
+/* .wrapper{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+} */
+.calender{
+  perspective: 1000px;
+  height: auto;
+  position: relative;
+}
+/* perspective is used on parent element, its child has transform  */
+.hatch{
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: inset 2px 5px 3px 0px rgba(0, 0, 0, 0.2);
+  outline: 3px solid rgba(0, 0, 0, 0.05);
+}
+.hatch img{
+  display: block;
+  height: auto;
+  transition: transform 0.8s cubic-bezier(0.3, 1.74, 0.39, 0.95);
+  transform-origin: top center;
+}
+.hatch:hover img{
+  transform: rotateX(120deg);
+}
+.hatch--12 {
+  top: 39.8vw;
+  left: 21vw;
+  background-image: url(http://wowslider.com/sliders/demo-60/data1/images/fruit_bowl.jpg);
+}
+.hatch--12 img{
+  width: calc(100vw * (248/1300))
+}
+/* svg height auto do not work on old webpage, like explore */
+.hatch--19 {
+  top: 59.7vw;
+  left: 60.78vw;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXIy81dlioHGqCoG37n2Axw6WtLAZDvE3aGKEU0v6IdENbCw0m);
+}
+/* top vw relative to screen */
+/* 248 is hatch 12 img width, 1300 is whole img width */
+.hatch--19 img {
+  width: calc(100vw * (243/1300));
+}
